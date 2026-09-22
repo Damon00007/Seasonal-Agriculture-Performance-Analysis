@@ -178,7 +178,7 @@ pip install pandas numpy matplotlib seaborn scipy jupyter
 Open:
 
 ```text
-code Seasonal_Agriculture_Analysis.ipynb
+code Seasonal_Agriculture_Analysis_With_Charts.ipynb
 ```
 
 using **Jupyter Notebook** or **VS Code**.
