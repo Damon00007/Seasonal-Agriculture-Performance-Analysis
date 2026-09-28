@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seasonal Agriculture Performance Analysis</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo">🌾 Seasonal Agriculture Analysis</div>
+  <div>
+    <a href="#overview">Overview</a>
+    <a href="#season">Seasons</a>
+    <a href="#crop">Crops</a>
+    <a href="#resources">Resources</a>
+    <a href="#stats">Statistics</a>
+    <a href="#findings">Findings</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <span class="tag">Major Project • Agricultural Data Analytics</span>
+  <h1>Seasonal Agriculture Performance Analysis</h1>
+  <p>
+    An interactive analytical view of agricultural performance across seasons,
+    crops, environmental conditions, resource usage, regional performance and economics.
+  </p>
+  <a class="btn" href="#overview">Explore Analysis ↓</a>
+</header>
+
+<section id="overview">
+  <h2 class="section-title">Project Overview</h2>
+  <p class="section-sub">Analysis based on 4,000 agricultural records and 28 variables.</p>
+  <div class="grid">
+    <div class="card"><div class="label">Records</div><div class="metric">4,000</div><div class="label">Agricultural observations</div></div>
+    <div class="card"><div class="label">Variables</div><div class="metric">28</div><div class="label">Environmental, resource & economic indicators</div></div>
+    <div class="card"><div class="label">Seasons</div><div class="metric">3</div><div class="label">Kharif • Rabi • Zaid</div></div>
+    <div class="card"><div class="label">Crops</div><div class="metric">8</div><div class="label">Analyzed crop categories</div></div>
+  </div>
+</section>
+
+<section id="season">
+  <h2 class="section-title">Seasonal Performance</h2>
+  <p class="section-sub">Comparison of average yield and economic performance across Kharif, Rabi and Zaid.</p>
+  <div class="chart-grid">
+    <div class="chart-card"><h3>Average Yield by Season</h3><div class="chart-wrap"><canvas id="yieldChart"></canvas></div></div>
+    <div class="chart-card"><h3>Average Profit by Season</h3><div class="chart-wrap"><canvas id="profitChart"></canvas></div></div>
+    <div class="chart-card"><h3>Average Profit Margin</h3><div class="chart-wrap"><canvas id="marginChart"></canvas></div></div>
+  </div>
+</section>
+
+<section id="crop">
+  <h2 class="section-title">Crop & Season Analysis</h2>
+  <p class="section-sub">Every analyzed crop showed the same observed ordering: Kharif yield > Rabi yield > Zaid yield.</p>
+  <div class="chart-card">
+    <h3>Average Yield by Crop and Season</h3>
+    <div class="chart-wrap" style="height:420px"><canvas id="cropChart"></canvas></div>
+  </div>
+</section>
+
+<section id="resources">
+  <h2 class="section-title">Environment & Resource Analysis</h2>
+  <p class="section-sub">Seasonal environmental conditions and resource-use efficiency.</p>
+  <div class="chart-grid">
+    <div class="chart-card"><h3>Water Usage</h3><div class="chart-wrap"><canvas id="waterChart"></canvas></div></div>
+    <div class="chart-card"><h3>Water-use Efficiency</h3><div class="chart-wrap"><canvas id="effChart"></canvas></div></div>
+  </div>
+  <br>
+  <table>
+    <thead><tr><th>Season</th><th>Rainfall (mm)</th><th>Temperature (°C)</th><th>Humidity (%)</th><th>Soil Moisture (%)</th></tr></thead>
+    <tbody>
+      <tr><td>Kharif</td><td>849.20</td><td>28.45</td><td>71.81</td><td>31.15</td></tr>
+      <tr><td>Rabi</td><td>437.62</td><td>23.49</td><td>57.89</td><td>24.07</td></tr>
+      <tr><td>Zaid</td><td>304.65</td><td>31.04</td><td>52.01</td><td>19.28</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="stats">
+  <h2 class="section-title">Statistical Analysis</h2>
+  <p class="section-sub">Tests were performed at a 5% significance level (α = 0.05).</p>
+  <div class="grid">
+    <div class="card"><div class="label">Yield ANOVA p-value</div><div class="metric">0.2137</div><div class="label">Not statistically significant at 5%</div></div>
+    <div class="card"><div class="label">Profit ANOVA p-value</div><div class="metric">1.71 × 10⁻¹⁵</div><div class="label">Statistically significant seasonal difference</div></div>
+    <div class="card"><div class="label">Water vs Profit correlation</div><div class="metric">r = 0.19</div><div class="label">Weak positive linear relationship</div></div>
+    <div class="card"><div class="label">Profit outliers</div><div class="metric">404</div><div class="label">10.1% of all records</div></div>
+  </div>
+</section>
+
+<section id="findings">
+  <h2 class="section-title">Key Findings & Recommendations</h2>
+  <div class="finding"><b>Seasonal profitability:</b> Kharif had the highest average profit and profit margin, while Zaid recorded negative average profit.</div>
+  <div class="finding"><b>Crop pattern:</b> All eight analyzed crops showed higher average yield in Kharif than Rabi and Zaid.</div>
+  <div class="finding"><b>Water efficiency:</b> Zaid had the highest average water usage but the lowest water-use efficiency.</div>
+  <div class="finding"><b>Regional variation:</b> State and season combinations showed substantial differences in average profit.</div>
+  <div class="finding"><b>Interpretation:</b> Environmental conditions varied considerably by season, but individual environmental variables showed weak record-level linear correlations with yield.</div>
+
+  <h3 style="margin-top:35px;color:var(--dark)">Recommendations</h3>
+  <div class="grid">
+    <div class="card">Optimize irrigation scheduling and water management during Zaid.</div>
+    <div class="card">Consider crop-season combinations in cultivation planning.</div>
+    <div class="card">Investigate unusual profit observations instead of automatically treating them as errors.</div>
+    <div class="card">Combine seasonal, crop, environmental, resource and economic indicators for decisions.</div>
+  </div>
+</section>
+
+<footer>
+  <strong>Seasonal Agriculture Performance Analysis</strong><br>
+  Built from the completed Python/Jupyter analysis • 4,000 records • 28 variables
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
